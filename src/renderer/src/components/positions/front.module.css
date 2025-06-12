@@ -1,0 +1,31 @@
+.rightArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  padding: 1em;
+  margin-left: 1em;
+
+  border: 0.25em solid var(--light-purple);
+  border-radius: 0.5em;
+  box-shadow: 5px 5px var(--purple);
+
+  cursor: pointer;
+}
+
+.rightArrow:hover {
+  box-shadow: 0 0;
+  transition: box-shadow 0.1s ease;
+}
+
+.inv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-weight: medium;
+  font-size: small;
+  letter-spacing: 0.5ch;
+}
