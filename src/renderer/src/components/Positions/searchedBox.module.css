@@ -1,0 +1,52 @@
+@import url('../../assets/base.css');
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 120%;
+
+  background-color: white;
+  box-shadow: 2px 2px 5px var(--light-gray);
+  border-radius: 0.5rem;
+  z-index: 2;
+
+  width: 300px;
+  height: 300px;
+}
+
+.prueba {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.35rem;
+
+  padding: 0.85rem 0.5rem;
+
+  box-shadow: 0 1px 2px var(--light-gray);
+}
+
+.prueba:hover {
+  background-color: var(--light-gray-2);
+
+  transition: background-color 0.12s ease-in-out;
+}
+
+.codes {
+  display: flex;
+  gap: 2rem;
+
+  justify-content: left;
+  align-items: center;
+  font-family: 'DM Sans';
+}
+
+.mainCode {
+  font-weight: 500;
+  font-size: small;
+}
+
+.secondCode {
+  font-family: 'DM Sans';
+  font-weight: 200;
+}

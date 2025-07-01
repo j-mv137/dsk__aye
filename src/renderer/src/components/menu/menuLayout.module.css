@@ -1,0 +1,58 @@
+@import url(../../assets/base.css);
+
+.mainContainer {
+  position: relative;
+  display: flex;
+
+  box-sizing: border-box;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  gap: 3rem;
+
+  padding: 0 3rem;
+}
+
+.background {
+  background-image: url('../../assets/images/Menu/olas2.png');
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: 50%;
+  width: 100%;
+  left: 0;
+}
+
+.secondContainter {
+  width: 100%;
+  display: flex;
+
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3rem 0 1rem 0;
+}
+
+.aye {
+  font-size: larger;
+  font-weight: bold;
+  user-select: none;
+  cursor: default;
+}
+
+a {
+  font-weight: light;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+
+.link:hover {
+  color: var(--gray);
+  transition: color ease 0.2s;
+}
