@@ -1,8 +1,7 @@
 :root {
-  --yellow-container: #f2ca52;
-  --light-blue: #e4eef2;
-  --light-purple: #9fa0bf;
-  --dark-blue: #4681a6;
-  --purple: #727aa6;
-  --orange: #d97b29;
+  --gray: #4a5565;
+  --light-gray: #cccbcb;
+  --light-gray-2: #cccbcb25;
+
+  --yellow: oklch(94.5% 0.129 101.54);
 }

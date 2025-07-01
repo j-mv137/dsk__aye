@@ -1,66 +1,22 @@
+import { MenuItem } from './MenuItems/menuItem'
 import styles from './menu.module.css'
-import { Item } from './item'
-import icon from '../../assets/images/posiciones_icono.png'
+
+import imgLupa from '../../assets/images/Menu/MenuItems/lupa1.png'
 
 export const Menu = (): React.JSX.Element => {
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.gridContainer}>
-        <div className={styles.itemContainer}>
-          <Item
-            iconPath={icon}
-            title="Posiciones"
-            description="Revisa las posiciones de los productos"
-            width={50}
-            path="/positions/front"
-          />
-        </div>
-        <div className={styles.itemContainer}>
-          <Item
-            iconPath={icon}
-            title="Posiciones"
-            description="Revisa las posiciones de los productos"
-            width={50}
-            path="/positions"
-          />
-        </div>
-        <div className={styles.itemContainer}>
-          <Item
-            iconPath={icon}
-            title="Posiciones"
-            description="Revisa las posiciones de los productos"
-            width={50}
-            path=""
-          />
-        </div>
-        <div className={styles.itemContainer}>
-          <Item
-            iconPath={icon}
-            title="Posiciones"
-            description="Revisa las posiciones de los productos"
-            width={50}
-            path=""
-          />
-        </div>
-        <div className={styles.itemContainer}>
-          <Item
-            iconPath={icon}
-            title="Posiciones"
-            description="Revisa las posiciones de los productos"
-            width={50}
-            path=""
-          />
-        </div>
-        <div className={styles.itemContainer}>
-          <Item
-            iconPath={icon}
-            title="Posiciones"
-            description="Revisa las posiciones de los productos"
-            width={50}
-            path=""
-          />
-        </div>
-      </div>
+    <div className={styles.menuItems}>
+      <MenuItem
+        to="positions/front"
+        imgPath={imgLupa}
+        title="Búsqueda de Artículos"
+        description=""
+      />
+      <MenuItem imgPath={imgLupa} title="Búsqueda de Artículos" description="" />
+      <MenuItem imgPath={imgLupa} title="Búsqueda de Artículos" description="" />
+      <MenuItem imgPath={imgLupa} title="Búsqueda de Artículos" description="" />
+      <MenuItem imgPath={imgLupa} title="Búsqueda de Artículos" description="" />
+      <MenuItem imgPath={imgLupa} title="Búsqueda de Artículos" description="" />
     </div>
   )
 }

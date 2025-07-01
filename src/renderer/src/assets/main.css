@@ -1,4 +1,3 @@
-@import './base.css';
 @font-face {
   font-family: 'DM Sans';
   src: url('./fonts/DM_Sans/static/DMSans-Regular.ttf') format('truetype');
@@ -12,35 +11,25 @@
 @font-face {
   font-family: 'DM Sans';
   src: url('./fonts/DM_Sans/static/DMSans-Medium.ttf') format('truetype');
-  font-weight: medium;
+  font-weight: 500;
 }
 @font-face {
   font-family: 'DM Sans';
   src: url('./fonts/DM_Sans/static/DMSans-Light.ttf') format('truetype');
-  font-weight: light;
+  font-weight: lighter;
 }
 
 html,
 body,
 #root {
-  height: 100%;
+  background-color: transparent;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-
-body,
-#root {
-  box-sizing: border-box;
-  padding: 20px;
-  font-family: 'DM Sans';
-}
-body {
-  background-color: var(--light-blue);
-}
-
-main {
   height: 100%;
-  margin: 0;
-  box-sizing: border-box;
+
+  font-family: 'DM Sans';
+
+  background-color: oklch(98.7% 0.022 95.277);
+  z-index: -1;
+  overflow: hidden;
 }

@@ -1,10 +1,12 @@
-import { Menu } from './components/menu/menu'
+import { Outlet } from 'react-router'
+import { Titlebar } from './components/Titlebar/titlebar'
 
 function App(): React.JSX.Element {
   return (
-    <main>
-      <Menu />
-    </main>
+    <>
+      <Titlebar />
+      <Outlet />
+    </>
   )
 }
 

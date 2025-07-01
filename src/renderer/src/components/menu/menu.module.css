@@ -1,18 +1,13 @@
-@import '../../assets/base.css';
+.menuItems {
+  width: 80%;
+  height: 80%;
 
-.mainContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: content-box;
-  padding: 5em;
-}
-
-.gridContainer {
   display: grid;
+  grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
-  max-width: 700px;
-  row-gap: 2em;
-  column-gap: 2em;
+  gap: 0.8em;
+
+  box-sizing: border-box;
+
+  padding: 3em 0 2em 0;
 }
