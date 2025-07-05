@@ -3,6 +3,8 @@ import styles from './positionsTemplate2.module.css'
 import { FrontMap } from './Rooms/Front/FrontMap'
 import { useMemo, useEffect, useRef, useState } from 'react'
 import frontImg from '../../assets/images/Rooms/front2.png'
+import { ContainerDown } from '../Utils/layout1'
+import { Input } from '../Utils/Input/input'
 
 type ImgAttr = { image: HTMLImageElement; position: number[] }
 
@@ -45,12 +47,12 @@ export const PositionTemplate2 = (): React.JSX.Element => {
 
   const input = useMemo(() => {
     return (
-      <input
+      <Input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         ref={searchInputRef}
-        className={styles.searchInput}
+        className={styles.searchInput2}
       />
     )
   }, [text])
@@ -95,40 +97,42 @@ export const PositionTemplate2 = (): React.JSX.Element => {
   }, [mapContainerRef, imgAttr])
 
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.searchContainer}>
-        <div className={styles.searchBar}>
-          {input}
-          <div className={styles.searchIconContainer} onClick={handleSearch}>
-            <SearchIcon width={17} opacity={0.7} />
+    <ContainerDown>
+      <>
+        <div className={styles.searchContainer}>
+          <div className={styles.searchBar}>
+            {input}
+            <div className={styles.searchIconContainer} onClick={handleSearch}>
+              <SearchIcon width={17} opacity={0.7} />
+            </div>
+          </div>
+          <div className={styles.itemsContainer}>
+            {(!prods || prods.length === 0) && (
+              <div className={styles.notFoundContainer}>
+                <div className={styles.notFoundContent}>
+                  <FileQuestionMark width="auto" height={100} />
+                  <span>No se encontraron artículos</span>
+                </div>
+              </div>
+            )}
+            {prods?.map((prod) => (
+              <div key={prod.code} className={styles.item}>
+                <div className={styles.itemContent}>
+                  <div className={styles.codes}>
+                    <span>{prod.code}</span>
+                    <span>{prod.secondCode}</span>
+                  </div>
+                  <span>{capitalizeFirst(prod.description)}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className={styles.itemsContainer}>
-          {(!prods || prods.length === 0) && (
-            <div className={styles.notFoundContainer}>
-              <div className={styles.notFoundContent}>
-                <FileQuestionMark width="auto" height={100} />
-                <span>No se encontraron artículos</span>
-              </div>
-            </div>
-          )}
-          {prods?.map((prod) => (
-            <div key={prod.code} className={styles.item}>
-              <div className={styles.itemContent}>
-                <div className={styles.codes}>
-                  <span>{prod.code}</span>
-                  <span>{prod.secondCode}</span>
-                </div>
-                <span>{capitalizeFirst(prod.description)}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      <div className={styles.mapContainer} ref={mapContainerRef}>
-        <FrontMap containerRef={mapContainerRef} imgAttr={imgAttr} />
-      </div>
-    </div>
+        <div className={styles.mapContainer} ref={mapContainerRef}>
+          <FrontMap containerRef={mapContainerRef} imgAttr={imgAttr} />
+        </div>
+      </>
+    </ContainerDown>
   )
 }
